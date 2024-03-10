@@ -13,6 +13,8 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.time.LocalDate;
+import java.util.HashMap;
+
 import javax.swing.event.DocumentEvent;
 
 /**
@@ -359,11 +361,29 @@ public class update extends javax.swing.JFrame {
                 String roomChoice = room.getSelectedItem();
                 Integer headCount = (Integer) headcount.getValue();
                 LocalDate currentDate = LocalDate.now();
-                
+
                 if (headCount <= 0) {
                     JOptionPane.showMessageDialog(null, "Head count must be greater than 0.");
                     return;
-                    
+
+                }
+
+                HashMap<String, Integer> roomHeadcountLimits = new HashMap<>();
+                roomHeadcountLimits.put("vip", 10);
+                roomHeadcountLimits.put("semi-vip", 8);
+                roomHeadcountLimits.put("lapu lapu", 7);
+                roomHeadcountLimits.put("coral", 4);
+                roomHeadcountLimits.put("malasugi", 7);
+                roomHeadcountLimits.put("starfish", 4);
+                roomHeadcountLimits.put("blue marlin", 3);
+                roomHeadcountLimits.put("yellow fin", 3);
+
+                if (headCount > roomHeadcountLimits.get(roomChoice)) {
+                    String message = String.format(
+                            "The headcount for this booking exceeds the limit for the %s room type! The limit is %d.",
+                            roomChoice, roomHeadcountLimits.get(roomChoice));
+                    JOptionPane.showMessageDialog(null, message);
+                    return;
                 }
 
                 // Update the row in the database
