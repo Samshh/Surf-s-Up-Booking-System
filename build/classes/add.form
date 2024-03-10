@@ -114,7 +114,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/1 (2).png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="List of Clients:"/>
+            <Property name="text" type="java.lang.String" value="Add Clients"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>

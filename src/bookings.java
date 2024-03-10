@@ -63,6 +63,7 @@ public class bookings extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
+        // <editor-fold defaultstate="collapsed" desc="Generated
         // Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
@@ -76,6 +77,7 @@ public class bookings extends javax.swing.JFrame {
                 javax.swing.JButton checkout = new javax.swing.JButton();
                 jScrollPane2 = new javax.swing.JScrollPane();
                 stats = new javax.swing.JTable();
+                javax.swing.JButton archives = new javax.swing.JButton();
                 javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
                 tableClient = new javax.swing.JTable();
                 javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
@@ -165,6 +167,14 @@ public class bookings extends javax.swing.JFrame {
                 });
                 jScrollPane2.setViewportView(stats);
 
+                archives.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                archives.setText("Archives");
+                archives.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                archivesActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
                 jPanel2.setLayout(jPanel2Layout);
                 jPanel2Layout.setHorizontalGroup(
@@ -172,38 +182,35 @@ public class bookings extends javax.swing.JFrame {
                                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                                                 .addContainerGap()
                                                                 .addGroup(jPanel2Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(jPanel2Layout
-                                                                                                .createParallelGroup(
-                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                                                                false)
-                                                                                                .addComponent(delete,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                195,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                .addComponent(update,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                195,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                .addComponent(add,
-                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                .addComponent(checkout,
-                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                .addComponent(logout,
-                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                Short.MAX_VALUE))
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                false)
+                                                                                .addComponent(delete,
+                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                195, Short.MAX_VALUE)
+                                                                                .addComponent(update,
+                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                195, Short.MAX_VALUE)
+                                                                                .addComponent(add,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
+                                                                                .addComponent(checkout,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
+                                                                                .addComponent(logout,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE)
                                                                                 .addComponent(jScrollPane2,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                195,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                195, Short.MAX_VALUE)
+                                                                                .addComponent(archives,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE))
                                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                 Short.MAX_VALUE)));
                 jPanel2Layout.setVerticalGroup(
@@ -229,6 +236,9 @@ public class bookings extends javax.swing.JFrame {
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 44,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(archives)
                                                                 .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED,
                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -343,6 +353,36 @@ public class bookings extends javax.swing.JFrame {
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
+
+        private void archivesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_archivesActionPerformed
+                String correctPassword = "yourPassword";
+
+                // Initialize the input password to an empty string
+                String inputPassword = "";
+
+                JPasswordField passwordField = new JPasswordField();
+                int option = JOptionPane.OK_OPTION;
+                while (inputPassword != null && !inputPassword.equals(correctPassword)
+                                && option == JOptionPane.OK_OPTION) {
+                        option = JOptionPane.showConfirmDialog(null, passwordField, "Enter the password:",
+                                        JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+                        inputPassword = new String(passwordField.getPassword());
+
+                        if (inputPassword != null && !inputPassword.equals(correctPassword)
+                                        && option == JOptionPane.OK_OPTION) {
+                                // If the password is incorrect, show a message
+                                JOptionPane.showMessageDialog(null, "Incorrect password! Please try again.");
+                        }
+                }
+
+                // Check if the input password is correct
+                if (inputPassword != null && inputPassword.equals(correctPassword)) {
+                        // If the password is correct, initialize the form
+                        archives newForm = new archives();
+                        newForm.setVisible(true);
+                        this.dispose();
+                }
+        }// GEN-LAST:event_archivesActionPerformed
 
         private void displayStats() {
                 DefaultTableModel statsModel = (DefaultTableModel) stats.getModel();
@@ -467,7 +507,8 @@ public class bookings extends javax.swing.JFrame {
                                 // Update the checkout time in the current database and transfer the row to the
                                 // new database
                                 checkoutArchive(selectedID, checkoutTime, currentDate, inputName,
-                                                roomChoice, inputEmail, inputPhone, currentTime, headCount, checkouDate);
+                                                roomChoice, inputEmail, inputPhone, currentTime, headCount,
+                                                checkouDate);
 
                                 displayInfo();
                         }

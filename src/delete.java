@@ -86,7 +86,7 @@ public class delete extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1 (2).png"))); // NOI18N
-        jLabel1.setText("List of Clients:");
+        jLabel1.setText("Delete Clients");
 
         tableClient.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         tableClient.setModel(new javax.swing.table.DefaultTableModel(
