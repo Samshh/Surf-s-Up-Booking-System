@@ -13,6 +13,7 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import javax.swing.event.DocumentEvent;
@@ -61,214 +62,287 @@ public class bookings extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        // <editor-fold defaultstate="collapsed" desc="Generated
+        // Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
 
-        javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
-        javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
-        javax.swing.JPanel jPanel2 = new javax.swing.JPanel();
-        javax.swing.JButton add = new javax.swing.JButton();
-        javax.swing.JButton update = new javax.swing.JButton();
-        javax.swing.JButton delete = new javax.swing.JButton();
-        javax.swing.JButton logout = new javax.swing.JButton();
-        javax.swing.JButton checkout = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        stats = new javax.swing.JTable();
-        javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
-        tableClient = new javax.swing.JTable();
-        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
-        search = new javax.swing.JTextField();
+                javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
+                javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+                javax.swing.JPanel jPanel2 = new javax.swing.JPanel();
+                javax.swing.JButton add = new javax.swing.JButton();
+                javax.swing.JButton update = new javax.swing.JButton();
+                javax.swing.JButton delete = new javax.swing.JButton();
+                javax.swing.JButton logout = new javax.swing.JButton();
+                javax.swing.JButton checkout = new javax.swing.JButton();
+                jScrollPane2 = new javax.swing.JScrollPane();
+                stats = new javax.swing.JTable();
+                javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
+                tableClient = new javax.swing.JTable();
+                javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
+                search = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                formWindowClosing(evt);
-            }
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
+                setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+                addWindowListener(new java.awt.event.WindowAdapter() {
+                        public void windowClosing(java.awt.event.WindowEvent evt) {
+                                formWindowClosing(evt);
+                        }
 
-        jPanel1.setBackground(new java.awt.Color(0, 145, 194));
+                        public void windowOpened(java.awt.event.WindowEvent evt) {
+                                formWindowOpened(evt);
+                        }
+                });
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1 (2).png"))); // NOI18N
-        jLabel1.setText("List of Clients:");
+                jPanel1.setBackground(new java.awt.Color(0, 145, 194));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Main Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 0, 14))); // NOI18N
-        jPanel2.setOpaque(false);
+                jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+                jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1 (2).png"))); // NOI18N
+                jLabel1.setText("List of Clients:");
 
-        add.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        add.setText("Add");
-        add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addActionPerformed(evt);
-            }
-        });
+                jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(
+                                new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Main Menu",
+                                javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+                                javax.swing.border.TitledBorder.DEFAULT_POSITION,
+                                new java.awt.Font("Century Gothic", 0, 14))); // NOI18N
+                jPanel2.setOpaque(false);
 
-        update.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        update.setText("Update");
-        update.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateActionPerformed(evt);
-            }
-        });
+                add.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                add.setText("Add");
+                add.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                addActionPerformed(evt);
+                        }
+                });
 
-        delete.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        delete.setText("Delete");
-        delete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteActionPerformed(evt);
-            }
-        });
+                update.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                update.setText("Update");
+                update.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                updateActionPerformed(evt);
+                        }
+                });
 
-        logout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        logout.setText("Log Out");
-        logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutActionPerformed(evt);
-            }
-        });
+                delete.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                delete.setText("Delete");
+                delete.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                deleteActionPerformed(evt);
+                        }
+                });
 
-        checkout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        checkout.setText("Check-out");
-        checkout.setMaximumSize(new java.awt.Dimension(79, 26));
-        checkout.setMinimumSize(new java.awt.Dimension(79, 26));
-        checkout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkoutActionPerformed(evt);
-            }
-        });
+                logout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                logout.setText("Log Out");
+                logout.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                logoutActionPerformed(evt);
+                        }
+                });
 
-        stats.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                checkout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                checkout.setText("Check-out");
+                checkout.setMaximumSize(new java.awt.Dimension(79, 26));
+                checkout.setMinimumSize(new java.awt.Dimension(79, 26));
+                checkout.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                checkoutActionPerformed(evt);
+                        }
+                });
 
-            },
-            new String [] {
-                "Bookings", "Head Count"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
+                stats.setModel(new javax.swing.table.DefaultTableModel(
+                                new Object[][] {
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(stats);
+                                },
+                                new String[] {
+                                                "Bookings", "Head Count"
+                                }) {
+                        boolean[] canEdit = new boolean[] {
+                                        false, false
+                        };
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(delete, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                        .addComponent(update, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                        .addComponent(add, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(checkout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(add)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(update)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(delete)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logout)
-                .addContainerGap())
-        );
+                        public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return canEdit[columnIndex];
+                        }
+                });
+                jScrollPane2.setViewportView(stats);
 
-        tableClient.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        tableClient.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+                jPanel2.setLayout(jPanel2Layout);
+                jPanel2Layout.setHorizontalGroup(
+                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel2Layout
+                                                                                                .createParallelGroup(
+                                                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                                                                false)
+                                                                                                .addComponent(delete,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                195,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addComponent(update,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                195,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addComponent(add,
+                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addComponent(checkout,
+                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addComponent(logout,
+                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                Short.MAX_VALUE))
+                                                                                .addComponent(jScrollPane2,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                195,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE)));
+                jPanel2Layout.setVerticalGroup(
+                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addComponent(add)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(update)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(delete)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(checkout,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jScrollPane2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                44,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE)
+                                                                .addComponent(logout)
+                                                                .addContainerGap()));
 
-            },
-            new String [] {
-                "ID", "Date", "Name", "Room Type", "Email", "Phone", "Check-In", "Check-Out", "Head Count"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
-            };
+                tableClient.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                tableClient.setModel(new javax.swing.table.DefaultTableModel(
+                                new Object[][] {
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(tableClient);
+                                },
+                                new String[] {
+                                                "ID", "Date", "Name", "Room Type", "Email", "Phone", "Check-In",
+                                                "Check-Out", "Head Count"
+                                }) {
+                        boolean[] canEdit = new boolean[] {
+                                        false, false, false, false, false, false, false, false, false
+                        };
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel8.setText("Search:");
+                        public boolean isCellEditable(int rowIndex, int columnIndex) {
+                                return canEdit[columnIndex];
+                        }
+                });
+                jScrollPane1.setViewportView(tableClient);
 
-        search.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+                jLabel8.setText("Search:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(103, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(search))
-                            .addComponent(jScrollPane1))))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+                search.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+                jPanel1.setLayout(jPanel1Layout);
+                jPanel1Layout.setHorizontalGroup(
+                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel1Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addContainerGap(103,
+                                                                                                                Short.MAX_VALUE)
+                                                                                                .addComponent(jLabel1,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                819,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addGap(107, 107, 107))
+                                                                                .addGroup(jPanel1Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addContainerGap()
+                                                                                                .addComponent(jPanel2,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                215,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addGroup(jPanel1Layout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                                .addGroup(jPanel1Layout
+                                                                                                                                .createSequentialGroup()
+                                                                                                                                .addComponent(jLabel8,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                                60,
+                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                                .addPreferredGap(
+                                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                                                .addComponent(search))
+                                                                                                                .addComponent(jScrollPane1))))
+                                                                .addContainerGap()));
+                jPanel1Layout.setVerticalGroup(
+                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addComponent(jLabel1)
+                                                                .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel1Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addGroup(jPanel1Layout
+                                                                                                                .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                                                .addComponent(search,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                                .addComponent(jLabel8))
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(jScrollPane1,
+                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                542,
+                                                                                                                Short.MAX_VALUE))
+                                                                                .addComponent(jPanel2,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE))
+                                                                .addContainerGap()));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+                getContentPane().setLayout(layout);
+                layout.setHorizontalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+                layout.setVerticalGroup(
+                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+
+                pack();
+        }// </editor-fold>//GEN-END:initComponents
 
         private void displayStats() {
                 DefaultTableModel statsModel = (DefaultTableModel) stats.getModel();
@@ -299,7 +373,7 @@ public class bookings extends javax.swing.JFrame {
                         }
 
                         // Add the results to the table in one row
-                        statsModel.addRow(new Object[] {totalRows, totalHeadcount});
+                        statsModel.addRow(new Object[] { totalRows, totalHeadcount });
 
                 } catch (SQLException e) {
                         System.err.println("Failed to retrieve stats from the database!");
@@ -376,9 +450,24 @@ public class bookings extends javax.swing.JFrame {
 
                         if (response == JOptionPane.YES_OPTION) {
                                 LocalTime checkoutTime = LocalTime.now().truncatedTo(ChronoUnit.MINUTES);
+                                LocalDate now = LocalDate.now();
+                                java.sql.Date checkouDate = java.sql.Date.valueOf(now);
 
-                                // Update the row in the database
-                                updateCheckout(selectedID, checkoutTime);
+                                // Retrieve the row data from the table
+                                java.sql.Date sqlDate = (java.sql.Date) tableClient.getValueAt(selectedRowIndex, 1);
+                                LocalDate currentDate = sqlDate.toLocalDate();
+                                String inputName = (String) tableClient.getValueAt(selectedRowIndex, 2);
+                                String roomChoice = (String) tableClient.getValueAt(selectedRowIndex, 3);
+                                String inputEmail = (String) tableClient.getValueAt(selectedRowIndex, 4);
+                                String inputPhone = (String) tableClient.getValueAt(selectedRowIndex, 5);
+                                String currentTime = (String) tableClient.getValueAt(selectedRowIndex, 6);
+                                String headCountString = (String) tableClient.getValueAt(selectedRowIndex, 8);
+                                Integer headCount = Integer.parseInt(headCountString);
+
+                                // Update the checkout time in the current database and transfer the row to the
+                                // new database
+                                checkoutArchive(selectedID, checkoutTime, currentDate, inputName,
+                                                roomChoice, inputEmail, inputPhone, currentTime, headCount, checkouDate);
 
                                 displayInfo();
                         }
@@ -387,19 +476,47 @@ public class bookings extends javax.swing.JFrame {
                 }
         }// GEN-LAST:event_updateActionPerformed
 
-        private void updateCheckout(int selectedID, LocalTime checkoutTime) {
+        private void checkoutArchive(int selectedID, LocalTime checkoutTime,
+                        LocalDate currentDate, String inputName, String roomChoice, String inputEmail,
+                        String inputPhone, String currentTime, Integer headCount, java.sql.Date checkoutDate) {
                 try (Connection connection = DriverManager.getConnection(url, username, password)) {
-                        String sql = "UPDATE clients SET CHECKOUT=? WHERE ID=?";
-                        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                                statement.setString(1, checkoutTime.toString());
-                                statement.setInt(2, selectedID);
-                                int rowsUpdated = statement.executeUpdate();
-                                if (rowsUpdated > 0) {
-                                        System.out.println("Checked-out successfully!");
+                        // Transfer the row to the new database
+                        String insertSql = "INSERT INTO checked_out_archive (BOOKING_DATE, NAME, ROOMTYPE, EMAIL, PHONE, CHECKIN, CHECKOUT, HEADCOUNT, CHECKOUT_DATE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                        try (PreparedStatement insertStatement = connection.prepareStatement(insertSql)) {
+                                insertStatement.setDate(1, java.sql.Date.valueOf(currentDate));
+                                insertStatement.setString(2, inputName);
+                                insertStatement.setString(3, roomChoice);
+                                insertStatement.setString(4, inputEmail);
+                                insertStatement.setString(5, inputPhone);
+                                insertStatement.setString(6, currentTime);
+                                insertStatement.setString(7, checkoutTime.toString());
+                                insertStatement.setInt(8, headCount);
+                                insertStatement.setDate(9, checkoutDate);
+                                int rowsInserted = insertStatement.executeUpdate();
+                                if (rowsInserted > 0) {
+                                        System.out.println("A row was Archived.");
+                                        deleteRowFromDataBase(selectedID);
                                 }
                         }
                 } catch (SQLException e) {
-                        System.err.println("Failed to update Check-out in the database!");
+                        System.err.println(
+                                        "Failed to update Check-out in the current database and/or insert row into the new database!");
+                        e.printStackTrace();
+                }
+        }
+
+        private void deleteRowFromDataBase(int id) {
+                try (Connection connection = DriverManager.getConnection(url, username, password)) {
+                        String sql = "DELETE FROM clients WHERE ID = ?";
+                        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                                statement.setInt(1, id);
+                                int rowsDeleted = statement.executeUpdate();
+                                if (rowsDeleted > 0) {
+                                        System.out.println("Row deleted successfully!");
+                                }
+                        }
+                } catch (SQLException e) {
+                        System.err.println("Failed to delete row from the database!");
                         e.printStackTrace();
                 }
         }
@@ -470,10 +587,10 @@ public class bookings extends javax.swing.JFrame {
                 });
         }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTextField search;
-    public javax.swing.JTable stats;
-    public javax.swing.JTable tableClient;
-    // End of variables declaration//GEN-END:variables
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JScrollPane jScrollPane2;
+        public javax.swing.JTextField search;
+        public javax.swing.JTable stats;
+        public javax.swing.JTable tableClient;
+        // End of variables declaration//GEN-END:variables
 }
