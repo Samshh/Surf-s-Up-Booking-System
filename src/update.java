@@ -369,15 +369,14 @@ public class update extends javax.swing.JFrame {
                 }
 
                 HashMap<String, Integer> roomHeadcountLimits = new HashMap<>();
-                roomHeadcountLimits.put("vip", 10);
-                roomHeadcountLimits.put("semi-vip", 8);
+                roomHeadcountLimits.put("vip", 15);
+                roomHeadcountLimits.put("semi-vip", 12);
                 roomHeadcountLimits.put("lapu lapu", 7);
-                roomHeadcountLimits.put("coral", 4);
+                roomHeadcountLimits.put("coral", 6);
                 roomHeadcountLimits.put("malasugi", 7);
-                roomHeadcountLimits.put("starfish", 4);
+                roomHeadcountLimits.put("starfish", 6);
                 roomHeadcountLimits.put("blue marlin", 3);
                 roomHeadcountLimits.put("yellow fin", 3);
-
                 if (headCount > roomHeadcountLimits.get(roomChoice)) {
                     String message = String.format(
                             "The headcount for this booking exceeds the limit for the %s room type! The limit is %d.",

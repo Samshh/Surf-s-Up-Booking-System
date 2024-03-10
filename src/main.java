@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.table.DefaultTableModel;
 
 public class main extends javax.swing.JFrame {
@@ -118,10 +119,10 @@ public class main extends javax.swing.JFrame {
 
         // Keep asking for the password until the user enters the correct password or
         // presses Cancel
-
+        JPasswordField passwordField = new JPasswordField();
         while (inputPassword != null && !inputPassword.equals(correctPassword)) {
-
-            inputPassword = JOptionPane.showInputDialog("Enter the password: ");
+            JOptionPane.showConfirmDialog(null, passwordField, "Enter the password:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            inputPassword = new String(passwordField.getPassword());
 
             if (inputPassword != null && !inputPassword.equals(correctPassword)) {
                 // If the password is incorrect, show a message
