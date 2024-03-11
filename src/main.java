@@ -135,7 +135,7 @@ public class main extends javax.swing.JFrame {
         // Check if the input password is correct
         if (inputPassword != null && inputPassword.equals(correctPassword)) {
             // If the password is correct, initialize the form
-            archives newForm = new archives();
+            bookings newForm = new bookings();
             newForm.setVisible(true);
             this.dispose();
         }

@@ -10,6 +10,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+
 import javax.swing.*;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
@@ -253,7 +255,7 @@ public class archives extends javax.swing.JFrame {
                 FileWriter csvWriter = new FileWriter("archives.csv");
                 csvWriter
                         .append("ID,BOOKING_DATE,NAME,ROOMTYPE,EMAIL,PHONE,CHECKIN,CHECKOUT,HEADCOUNT,CHECKOUT_DATE\n");
-
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
                 while (resultSet.next()) {
                     csvWriter.append(resultSet.getString("ID"));
                     csvWriter.append(",");
@@ -272,7 +274,7 @@ public class archives extends javax.swing.JFrame {
                     csvWriter.append(resultSet.getString("CHECKOUT"));
                     csvWriter.append(",");
                     csvWriter.append(resultSet.getString("HEADCOUNT"));
-                    csvWriter.append("\n");
+                    csvWriter.append(",");
                     csvWriter.append(resultSet.getString("CHECKOUT_DATE"));
                     csvWriter.append("\n");
                 }
@@ -287,7 +289,7 @@ public class archives extends javax.swing.JFrame {
             System.err.println("Failed to create CSV file!");
             e.printStackTrace();
         }
-    }
+    }// GEN-LAST:event_printActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {
         bookings newForm = new bookings();
